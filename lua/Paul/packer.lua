@@ -13,16 +13,29 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({ 'rose-pine/neovim', as = 'rose-pine', 
-  config = function() 
+  --use({ 'rose-pine/neovim', as = 'rose-pine', 
+--  config = function() 
 
-	  vim.cmd('colorscheme rose-pine')  end })
+--	  vim.cmd('colorscheme rose-pine')  end })
+
+      use ({ 'folke/tokyonight.nvim', as = 'tokyonight', config = function()
+
+      vim.cmd('colorscheme tokyonight-night')  end })
+ 
 
 	  use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	  use( 'nvim-treesitter/playground', {run = ':TSUpdate'})
 	  use('ThePrimeagen/harpoon')
 	  use('mbbill/undotree')
 	  use('tpope/vim-fugitive')
+      use( 'fatih/vim-go', { run = ':GoUpdateBinaries' })
+      use({ 'folke/trouble.nvim', requires = "nvim-tree/nvim-web-devicons",
+          config = function()
+              require("trouble").setup {
+                  position = "right"
+              }
+          end
+      })
 
 	 use {
 		 'VonHeikemen/lsp-zero.nvim',
