@@ -36,6 +36,23 @@ return require('packer').startup(function(use)
               }
           end
       })
+      use( {
+          "windwp/nvim-autopairs",
+          config = function() require("nvim-autopairs").setup {} end
+      })
+
+      use ({
+          "folke/todo-comments.nvim",
+          requires = "nvim-lua/plenary.nvim",
+          config = function()
+              require("todo-comments").setup {
+                  -- your configuration comes here
+                  -- or leave it empty to use the default settings
+                  -- refer to the configuration section below
+              }
+          end
+      })
+
 
 	 use {
 		 'VonHeikemen/lsp-zero.nvim',
