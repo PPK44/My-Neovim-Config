@@ -8,6 +8,10 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.guifont='GoMono NF:h12'
+--vim.opt.guifont='DejaVuSansMono NFM:h11'
+
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = false

@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 	  use('ThePrimeagen/harpoon')
 	  use('mbbill/undotree')
 	  use('tpope/vim-fugitive')
+      use('nvim-tree/nvim-web-devicons')
       use( 'fatih/vim-go', { run = ':GoUpdateBinaries' })
       use({ 'folke/trouble.nvim', requires = "nvim-tree/nvim-web-devicons",
           config = function()
