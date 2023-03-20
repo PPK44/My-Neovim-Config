@@ -8,7 +8,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
-vim.opt.guifont='GoMono NF:h12'
+vim.opt.guifont='GoMono Nerd Font:h12'
 --vim.opt.guifont='DejaVuSansMono NFM:h11'
 
 
