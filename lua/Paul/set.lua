@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c-i:block"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -10,7 +10,6 @@ vim.opt.expandtab = true
 
 vim.opt.guifont='GoMono NF:h12'
 --vim.opt.guifont='DejaVuSansMono NFM:h11'
-
 
 vim.opt.smartindent = true
 

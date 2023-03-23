@@ -3,6 +3,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex);
 vim.keymap.set("i", "jj", "<Esc>");
 vim.keymap.set("n", "<leader>dd", ":Lexplore %:p:h<CR>");
 vim.keymap.set("n", "<leader>da", ":Lexplore");
+vim.keymap.set("v", "<leader>s", "xi()<Esc>P");
 local function netrw_mapping()
   local bufmap = function(lhs, rhs)
     local opts = {buffer = true, remap = true}
