@@ -42,6 +42,21 @@ return require('packer').startup(function(use)
           config = function() require("nvim-autopairs").setup {} end
       })
 
+      use({ "zbirenbaum/copilot.lua", 
+            cmd = "Copilot",
+            event = "InsertEnter",
+            config = function()
+                require("copilot").setup({
+                    filetypes = {
+                        javascript = true, -- allow specific filetype
+                        typescript = true, -- allow specific filetype
+                        go = true,
+                        ["*"] = false, -- disable for all other filetypes and ignore default `filetypes`
+                },
+            })
+            end,
+        })
+
       use ({
           "folke/todo-comments.nvim",
           requires = "nvim-lua/plenary.nvim",
